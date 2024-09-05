@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'NanumSquareNeoLight';
+  src: url("./assets/fonts/NanumSquareNeo-aLt.ttf");}
+
+@font-face {
+  font-family: 'NanumSquareNeo';
+  src: url("./assets/fonts/NanumSquareNeo-bRg.ttf");
+}
+
+@font-face {
+  font-family: 'NanumSquareNeoBold';
+  src: url('./assets/fonts/NanumSquareNeo-cBd.ttf');}
+
+body {
+  margin: 0;
+  font-family: 'NanumSquareNeo';
+  background-color: #f2f2f2;
+}
