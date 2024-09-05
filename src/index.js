@@ -7,7 +7,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   typography: {
-    fontFamily: 'NanumSquareNeo, Arial, sans-serif',
+    fontFamily: 'Pretendard-Regular, Arial, sans-serif',
   },
 });
 

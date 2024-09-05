@@ -60,46 +60,105 @@ const CheckReserve = () => {
     <div>
       <Head />
       <BodyWrapp>
-        <Typography style={{ fontFamily: "NanumSquareNeoBold", marginBottom: "15px" }}>
+        <Typography
+          style={{ fontFamily: "Pretendard-SemiBold", marginBottom: "20px", fontSize: "21px" }}
+        >
           예약확인
         </Typography>
-        <Typography style={{ marginBottom: "5px" }}>시설정보</Typography>
+        <Typography
+          style={{ marginBottom: "5px", fontFamily: "Pretendard-SemiBold", fontSize: "17px" }}
+        >
+          시설정보
+        </Typography>
         <InfoCard />
-        <Typography style={{ marginTop: "10px", fontFamily: "NanumSquareNeoBold" }}>
+        <Typography style={{ marginTop: "10px", fontFamily: "Pretendard-SemiBold" }}>
           업무공간
         </Typography>
-        <Typography>좌석 14</Typography>
-        <Typography style={{ marginTop: "5px", fontFamily: "NanumSquareNeoBold" }}>
+        <Typography style={{ fontSize: "15px" }}>좌석 14</Typography>
+        <Typography style={{ marginTop: "5px", fontFamily: "Pretendard-SemiBold" }}>
           예약날짜
         </Typography>
-        <Typography>2024년 9월 10일</Typography>
-        <Alert severity="info" style={{ marginTop: "10px", borderRadius: "15px" }}>
-          <AlertTitle>강소기업 재직자만 예약이 가능합니다.</AlertTitle>
+        <Typography tyle={{ fontSize: "15px" }}>2024년 9월 10일</Typography>
+        <Alert
+          severity="info"
+          style={{
+            marginTop: "10px",
+            borderRadius: "8.67px",
+            height: "46px",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <AlertTitle
+            style={{
+              fontSize: "13px",
+              fontFamily: "pretendard-Medium",
+              marginTop: "5px",
+              color: "#4A90E2",
+            }}
+          >
+            강소기업 재직자만 예약이 가능합니다.
+          </AlertTitle>
         </Alert>
-        <Alert severity="info" style={{ marginTop: "10px", borderRadius: "15px" }}>
-          <AlertTitle>14세미만의 미성년자는 예약이 불가능합니다.</AlertTitle>
+        <Alert
+          severity="info"
+          style={{
+            marginTop: "10px",
+            borderRadius: "8.67px",
+            height: "46px",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <AlertTitle
+            style={{
+              fontSize: "13px",
+              fontFamily: "pretendard-Medium",
+              marginTop: "5px",
+              color: "#4A90E2",
+            }}
+          >
+            14세미만의 미성년자는 예약이 불가능합니다.
+          </AlertTitle>
         </Alert>
       </BodyWrapp>
       <Divider style={{ marginTop: "15px" }} />
       <BodyWrapp>
-        <Typography style={{ marginTop: "15px", marginBottom: "15px" }}>신청자 정보</Typography>
-        <Typography style={{ fontFamily: "NanumSquareNeoBold", marginBottom: "5px" }}>
-          기관명
+        <Typography
+          style={{
+            marginTop: "15px",
+            marginBottom: "15px",
+            fontSize: "17px",
+            fontFamily: "Pretendard-SemiBold",
+          }}
+        >
+          신청자 정보
         </Typography>
-        <TextField size="small" style={{ marginBottom: "10px" }} />
-        <Typography style={{ fontFamily: "NanumSquareNeoBold", marginBottom: "5px" }}>
-          부서명
+        <Typography
+          style={{ fontFamily: "Pretendard-SemiBold", marginBottom: "5px", fontSize: "15px" }}
+        >
+          기관명*
         </Typography>
-        <TextField size="small" style={{ marginBottom: "10px" }} />
-        <Typography style={{ fontFamily: "NanumSquareNeoBold", marginBottom: "5px" }}>
-          성명
+        <TextField size="small" style={{ marginBottom: "10px", width: "303px" }} />
+        <Typography
+          style={{ fontFamily: "Pretendard-SemiBold", marginBottom: "5px", fontSize: "15px" }}
+        >
+          부서명*
         </Typography>
-        <TextField size="small" style={{ marginBottom: "10px" }} />
-        <Typography style={{ fontFamily: "NanumSquareNeoBold", marginBottom: "5px" }}>
-          이메일
+        <TextField size="small" style={{ marginBottom: "10px", width: "303px" }} />
+        <Typography
+          style={{ fontFamily: "Pretendard-SemiBold", marginBottom: "5px", fontSize: "15px" }}
+        >
+          성명*
         </Typography>
-        <TextField style={{ width: "150px", marginBottom: "10px" }} size="small" />@
-        <TextField select size="small">
+        <TextField size="small" style={{ marginBottom: "10px", width: "303px" }} />
+        <Typography
+          style={{ fontFamily: "Pretendard-SemiBold", marginBottom: "5px", fontSize: "15px" }}
+        >
+          이메일*
+        </Typography>
+        <TextField style={{ width: "143px", marginBottom: "10px" }} size="small" />@
+        <TextField select size="small" style={{ width: "143px" }}>
           {email.map((option) => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
@@ -109,21 +168,21 @@ const CheckReserve = () => {
         <Typography style={{ fontFamily: "NanumSquareNeoBold", marginBottom: "5px" }}>
           연락처(사무실)
         </Typography>
-        <TextField size="small" select style={{ width: "80px", marginBottom: "10px" }}>
+        <TextField size="small" select style={{ width: "90px", marginBottom: "10px" }}>
           {company.map((option) => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
             </MenuItem>
           ))}
         </TextField>
-        &nbsp; -&nbsp;
-        <TextField size="small" style={{ width: "80px" }} />
         &nbsp;-&nbsp;
-        <TextField size="small" style={{ width: "80px" }} />
+        <TextField size="small" style={{ width: "90px" }} />
+        &nbsp;-&nbsp;
+        <TextField size="small" style={{ width: "90px" }} />
         <Typography style={{ fontFamily: "NanumSquareNeoBold", marginBottom: "5px" }}>
-          연락처(휴대폰)
+          연락처(휴대폰)*
         </Typography>
-        <TextField select size="small" style={{ width: "80px", marginBottom: "10px" }}>
+        <TextField select size="small" style={{ width: "90px", marginBottom: "10px" }}>
           {phone.map((option) => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
@@ -131,11 +190,29 @@ const CheckReserve = () => {
           ))}
         </TextField>
         &nbsp;-&nbsp;
-        <TextField size="small" style={{ width: "80px" }} />
+        <TextField size="small" style={{ width: "90px" }} />
         &nbsp;-&nbsp;
-        <TextField size="small" style={{ width: "80px" }} />
-        <Alert severity="info" style={{ marginTop: "10px", borderRadius: "15px" }}>
-          <AlertTitle>예약승인결과와 예약번호가 입력하신 휴대폰 번호로 발송됩니다.</AlertTitle>
+        <TextField size="small" style={{ width: "90px" }} />
+        <Alert
+          severity="info"
+          style={{
+            marginTop: "10px",
+            borderRadius: "8.67px",
+            height: "46px",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <AlertTitle
+            style={{
+              fontSize: "13px",
+              fontFamily: "pretendard-Medium",
+              marginTop: "5px",
+              color: "#4A90E2",
+            }}
+          >
+            예약승인결과와 예약번호가 입력하신 휴대폰 번호로 발송됩니다.
+          </AlertTitle>
         </Alert>
         <Card style={{ marginTop: "15px", backgroundColor: "#f5f5f5" }}>
           <CardContent>
@@ -187,10 +264,14 @@ const CheckReserve = () => {
       <Button
         variant="contained"
         style={{
-          backgroundColor: "#2196f3",
+          backgroundColor: "#4A90E2",
           marginTop: "10px",
           marginBottom: "10px",
-          left: "250px",
+          left: "16px",
+          width: "333px",
+          height: "56px",
+          fontFamily: "Pretendard-Medium",
+          fontSize: "15px",
         }}
         onClick={handleClickOpen}
       >
@@ -200,12 +281,19 @@ const CheckReserve = () => {
         open={open}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
+        style={{ borderRadius: "17px" }}
       >
-        <DialogTitle id="alert-dialog-title" style={{ fontFamily: "NanumSquareNeoBold" }}>
+        <DialogTitle
+          id="alert-dialog-title"
+          style={{ fontFamily: "Pretendart-SemiBold", fontSize: "19px" }}
+        >
           귀하는 현재 양육중이신가요?
         </DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-description">
+          <DialogContentText
+            id="alert-dialog-description"
+            style={{ fontSize: "15px", fontFamily: "pretendard-Medium" }}
+          >
             맞춤 혜택을 받아보세요
           </DialogContentText>
         </DialogContent>
@@ -217,23 +305,39 @@ const CheckReserve = () => {
               marginBottom: "5px",
             }}
           >
-            <Link to="/CenterInfo" style={{ textDecoration: "none", color: "#2196f3" }}>
+            <Link
+              to="/CenterInfo"
+              style={{ textDecoration: "none", color: "#4A90E2", width: "70px" }}
+            >
               아니요
             </Link>
           </Button>
           <Button
             variant="contained"
             style={{
-              backgroundColor: "#2196f3",
+              backgroundColor: "#4A90E2",
               marginTop: "10px",
               marginBottom: "5px",
             }}
           >
-            <Link to="/CenterInfo" style={{ textDecoration: "none", color: "white" }}>
+            <Link
+              to="/CenterInfo"
+              style={{ textDecoration: "none", color: "white", width: "150px" }}
+            >
               네, 양육자입니다
             </Link>
           </Button>
         </DialogActions>
+        <FormControlLabel
+          control={<Checkbox />}
+          style={{
+            color: "#00000099",
+            fontSize: "13px",
+            fontFamily: "Pretendard-Medium",
+            marginLeft: "10px",
+          }}
+          label="오늘 하루 표시하지 않기"
+        />
       </Dialog>
     </div>
   );

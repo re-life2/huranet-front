@@ -13,6 +13,7 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -54,18 +55,33 @@ const Reserve = () => {
     <div>
       <Head />
       <Divider />
-      <img src={Seocho} alt="Seocho" style={{ width: "100%" }} />
+      <img src={Seocho} alt="Seocho" style={{ width: "100%", height: "268px" }} />
+      <KeyboardArrowLeftIcon
+        style={{
+          position: "relative",
+          left: "10px",
+          bottom: "265px",
+          color: "white",
+        }}
+      />
       <BodyWrapp>
         <CardWrapp>
           <Chip
             label="서초구"
-            style={{ backgroundColor: "#e3f2fd", color: "#2196f3", width: "70px" }}
+            style={{
+              backgroundColor: "#e3f2fd",
+              color: "#2196f3",
+              width: "50px",
+              height: "20px",
+              borderRadius: "4px",
+              fontSize: "10px",
+            }}
           />
-          <Typography style={{ fontFamily: "NanumSquareNeoBold" }}>
+          <Typography style={{ fontFamily: "Pretendard-SemiBold", fontSize: "21px" }}>
             서초 스마트 워크센터
-            <FavoriteBorderIcon style={{ position: "absolute", right: "340px" }} />
+            <FavoriteBorderIcon style={{ position: "relative", left: "134px" }} />
           </Typography>
-          <Typography>
+          <Typography style={{ fontSize: "15px" }}>
             서울특별시 서초구 바우뫼로 6길 57
             <br />
             대한결핵협회 별관 1층
@@ -73,47 +89,109 @@ const Reserve = () => {
         </CardWrapp>
       </BodyWrapp>
       <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-        <Tab label="시설정보" {...a11yProps(0)} style={{ width: "180px" }} />
-        <Tab label="위치안내" disabled {...a11yProps(1)} style={{ width: "180px" }} />
+        <Tab
+          label="시설정보"
+          {...a11yProps(0)}
+          style={{ width: "180px", fontFamily: "Pretendard-SemiBold", fontSize: "15px" }}
+        />
+        <Tab
+          label="위치안내"
+          disabled
+          {...a11yProps(1)}
+          style={{ width: "180px", fontFamily: "Pretendard-SemiBold", fontSize: "15px" }}
+        />
       </Tabs>
       <BodyWrapp>
-        <Typography style={{ fontFamily: "NanumSquareNeoBold", marginBottom: "5px" }}>
+        <Typography
+          style={{
+            fontFamily: "Pretendard-SemiBold",
+            fontSize: "17px",
+            marginBottom: "5px",
+            marginTop: "20px",
+          }}
+        >
           시설정보
         </Typography>
-        <Typography>
+        <Typography style={{ fontSize: "15px" }}>
           운영시간 &emsp;평일 08:30~19:00
           <br />
-          &emsp;&emsp;&emsp;&emsp;&emsp; (점심시간 12:00~13:00)
+          &emsp;&emsp;&emsp;&emsp;&nbsp; (점심시간 12:00~13:00)
         </Typography>
-        <Typography>전화번호 &emsp;02-529-4834</Typography>
-        <Alert severity="info" style={{ marginTop: "10px", borderRadius: "15px" }}>
-          <AlertTitle>법정 공휴일은 휴무입니다.</AlertTitle>
+        <Typography style={{ fontSize: "15px" }}>전화번호 &emsp;02-529-4834</Typography>
+        <Alert
+          severity="info"
+          style={{
+            marginTop: "10px",
+            borderRadius: "8.67px",
+            height: "46px",
+            display: "flex",
+            alignItems: "center",
+            color: "#2196f3",
+          }}
+        >
+          <AlertTitle
+            style={{
+              fontSize: "13px",
+              fontFamily: "pretendard-Medium",
+              marginTop: "5px",
+              color: "#4A90E2",
+            }}
+          >
+            법정 공휴일은 휴무입니다.
+          </AlertTitle>
         </Alert>
-        <Alert severity="info" style={{ marginTop: "10px", borderRadius: "15px" }}>
-          <AlertTitle>
-            점심시간에 지원이 어려우므로 사전에 연락하여 출입아내 받으시기 바랍니다.
+        <Alert
+          severity="info"
+          style={{
+            marginTop: "10px",
+            borderRadius: "8.67px",
+            height: "66px",
+            display: "flex",
+            color: "#2196f3",
+          }}
+        >
+          <AlertTitle
+            style={{ fontSize: "13px", fontFamily: "pretendard-Medium", color: "#4A90E2" }}
+          >
+            점심시간에 지원이 어려우므로 사전에 연락하여 출입안내 받으시기 바랍니다.
           </AlertTitle>
         </Alert>
         <Typography
-          style={{ fontFamily: "NanumSquareNeoBold", marginBottom: "10px", marginTop: "20px" }}
+          style={{
+            fontFamily: "Pretendard-SemiBold",
+            fontSize: "15px",
+            marginBottom: "10px",
+            marginTop: "20px",
+          }}
         >
           업무환경
         </Typography>
-        <Typography>
+        <Typography style={{ fontSize: "15px" }}>
           업무공간: PC, 망연계솔루션, 복합기, 파쇄기
           <br />
           회의공간: 영상회의시스템
           <br />
           휴게공간: 냉장고, 음수대
         </Typography>
+        <Typography
+          style={{ fontSize: "17px", fontFamily: "pretendard-SemiBold", marginTop: "50px" }}
+        >
+          공간선택
+        </Typography>
+        <Typography style={{ fontSize: "15px", fontFamily: "pretendard-Medium" }}>
+          날짜를 선택해주세요
+        </Typography>
       </BodyWrapp>
+
       <Button
         variant="contained"
         style={{
-          backgroundColor: "#2196f3",
-          marginTop: "10px",
-          marginBottom: "5px",
-          left: "250px",
+          width: "135px",
+          height: "56px",
+          backgroundColor: "#4A90E2",
+          position: "relative",
+          left: "214px",
+          bottom: "50px",
         }}
       >
         <Link to="/CheckReserve" style={{ textDecoration: "none", color: "white" }}>
@@ -132,7 +210,6 @@ const CardWrapp = styled.div`
 const BodyWrapp = styled.div`
   margin-right: 16px;
   margin-left: 16px;
-  margin-top: 10px;
   margin-bottom: 5px;
 `;
 

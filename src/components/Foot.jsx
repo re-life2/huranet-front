@@ -3,10 +3,11 @@ import styled from "styled-components";
 import Logo from "../assets/img/logo_2.png";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { Typography } from "@mui/material";
 
 const Foot = () => {
   return (
-    <Footer style={{ backgroundColor: "#e3f2fd" }}>
+    <Footer style={{ backgroundColor: "#F0F7FF" }}>
       <LogoWrapp>
         <LogoImg src={Logo} alt="Logo" />
         <br />
@@ -21,11 +22,31 @@ const Foot = () => {
         <UseWrapp>이용안내 이용약관 개인정보처리방침 자주묻는 질문</UseWrapp>
         <InfoWrapp>
           대표번호
-          <h4 style={{ color: "black" }}>1577-9375</h4>
+          <Typography
+            style={{
+              color: "black",
+              fontFamily: "Pretendard-Medium",
+              fontSize: "13px",
+              marginTop: "10px",
+              marginBottom: "10px",
+            }}
+          >
+            1577-9375
+          </Typography>
           고객센터 운영시간
-          <h4 style={{ color: "black" }}>10:00~18:00 (주말, 공휴일 휴무)</h4>
-          <YouTubeIcon style={{ color: "#42a5f5" }} />
-          <InstagramIcon style={{ color: "#42a5f5" }} />
+          <Typography
+            style={{
+              color: "black",
+              fontFamily: "Pretendard-Medium",
+              fontSize: "13px",
+              marginTop: "10px",
+              marginBottom: "10px",
+            }}
+          >
+            10:00~18:00 (주말, 공휴일 휴무)
+          </Typography>
+          <YouTubeIcon style={{ color: "#4A90E2" }} />
+          <InstagramIcon style={{ color: "#4A90E2" }} />
         </InfoWrapp>
       </AllInfoWrapp>
     </Footer>
@@ -35,7 +56,7 @@ const Foot = () => {
 const Footer = styled.footer`
   display: flex;
   flex-direction: column;
-  background-color: #e3f2fd;
+  background-color: #f0f7ff;
 `;
 
 const LogoWrapp = styled.div`
@@ -55,12 +76,12 @@ const AllInfoWrapp = styled.div`
   margin-left: 16px;
 `;
 const Locationwrapp = styled.div`
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 10px;
 `;
 const CopyWrapp = styled.div`
-  font-size: 12px;
-  color: #bdbdbd;
+  font-size: 10px;
+  color: #8e8e8e;
   margin-bottom: 10px;
 `;
 
@@ -70,8 +91,8 @@ const UseWrapp = styled.div`
 `;
 
 const InfoWrapp = styled.div`
-  font-size: 14px;
-  color: #bdbdbd;
+  font-size: 10px;
+  color: #8e8e8e;
 `;
 
 export default Foot;
